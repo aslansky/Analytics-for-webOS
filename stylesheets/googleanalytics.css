@@ -1,0 +1,288 @@
+.header-period-source {
+    position:relative;
+    float:right;
+    margin: 8px -16px 0px 0px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    height:35px;
+    line-height: 33px;
+    border-width: 0px 22px 0px 16px;
+    -webkit-border-image: url(../images/selector-header-gray.png) 0 22 0 16 stretch stretch;
+    -webkit-box-sizing: border-box; 
+}
+.header-period-source-hit-target { 
+    /* note to self, this is a convenient way to create hit targets, because it doesn't disrupt any flow! */
+    position:absolute;
+    top:-10px;
+    left:-35px;
+    right:-25px;
+    height:52px;
+}
+.header-period-selector {
+    margin-left:-5px;
+    padding-right: 2px;
+    background: transparent;
+    display:inline-block;
+    min-width: 60px;
+    max-width: 90px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#scroll_container {
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+}
+#empty_spacer {
+    width: 100%;
+    height: 50px;
+}
+
+.fade-bottom {
+    position: fixed; 
+    bottom: 0; 
+    z-index: 11000;
+    height: 54px; 
+    width: 100%;
+    background: url(../images/fade-bottom.png) bottom center repeat-x;
+    -webkit-palm-mouse-target: ignore;
+}
+
+.cal-selector-popup {
+    top: 38px; /*4 px from header, max height should be same dist from bot as top*/
+    right:-3px; 
+}
+
+.dashboard-row {
+    border: 0;
+    background: none;
+    height: 150px;
+    margin-bottom: -7px;
+}
+.dashboard-row .palm-group {
+    position: relative;
+}
+.dashboard-row.selected, .dashboard-row.last.selected {
+    height: 150px;
+    margin-bottom: 0;
+}
+.dashboard-row.selected > .palm-row-wrapper, .dashboard-row.selected.last > .palm-row-wrapper {
+    margin: -31px -20px -31px -20px;
+}
+.dashboard-row.selected.first > .palm-row-wrapper {
+    margin: -24px -20px -31px -20px;
+}
+.dashboard-row.selected {
+    -webkit-border-image: url(../images/selection-gradient-default) 24 20 24 20 repeat repeat;
+    background: url(../images/background-grey-ho.png) no-repeat -13px -23px;
+}
+.dashboard-row.selected.first {
+    background: url(../images/background-grey-ho.png) no-repeat -13px -16px;
+}
+.dashboard-row.palm-reorder-element {   
+  /*background: none;*/
+  border-width: 24px 20px;
+  -webkit-border-image: url(../images/palm-row-dragging) 24 20 24 20 repeat repeat;
+  background: url(../images/background-grey-ho.png) no-repeat -13px -16px;
+  z-index: 100;
+}
+.dashboard-row.palm-reorder-element > .palm-row-wrapper {
+  margin: -24px -20px -20px -20px;
+}
+.dashboard-row .content {
+    height: 85px;
+}
+.dashboard-row .badge {
+    float: left;
+    width: 85px;
+    height: 85px;
+    background: url(../images/bg-badge.png) no-repeat 0 0;
+    margin-right: 7px;
+    overflow: hidden;
+    color: #FFF;
+}
+.dashboard-row .visits {
+    /*background-position: -100px 0;*/
+}
+.dashboard-row .bounce {
+    /*background-position: -300px 0;*/
+    margin-right: 0;
+}
+.dashboard-row .pageview {
+    /*background-position: -200px 0;*/
+}
+.dashboard-row .change.red {
+    background-position: 0 0;
+}
+
+.dashboard-row .badge span.head {
+    display: block;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 8px 0 9px 0;
+}
+
+.dashboard-row .badge span.amount {
+    display: block;
+    font-size: 25px;
+    text-align: center;
+    padding: 0 0 10px 0;
+}
+
+.dashboard-row .spinner {
+    float: none;
+    margin: 0;
+    position: absolute;
+    margin: -64px 0 0 -64px;
+    left: 50%;
+    top: 50%;
+}
+
+.palm-row .label.number {
+    font-size: 20px;
+    text-transform: none;
+    margin: 13px 14px 15px 14px;
+}
+#chart, .palm-group .palm-row .palm-row-wrapper.event-chart {
+    margin: 13px 14px 10px 14px;
+}
+#chart-image, #browser-image {
+    border: none;
+    margin-bottom: 10px;
+}
+#browser-image {
+    margin-top: 10px;
+}
+#alert-text {
+    padding: 0 10px;
+}
+#alert-text.error {
+    color: #BA3C3A;
+}
+
+.palm-dialog-content .textfield-group .date-title {
+    margin-left: -25px;
+    margin-right: -25px;
+}
+
+.filter-field-container-height {
+    height: 96px;
+}
+.palm-group > .cs-list > .palm-list, .palm-row.chart {
+    margin: -14px -16px -17px -16px;
+    padding-bottom: 3px;
+    width: auto;
+}
+.palm-group > .browser-list > .palm-list .palm-row.first, .palm-group > .browser-list > .palm-list .palm-row.single {
+    margin-top: 20px;
+}
+.palm-group > .browser-list > .palm-list .empty {
+    margin-top: 15px;
+}
+.palm-group > .browser-list > .palm-list .palm-row.selected.first {
+    border: none;
+    background: none;
+    border-width: 24px 20px;
+    -webkit-border-image: url(../images/selection-gradient-default.png) 24 20 24 20 repeat repeat;
+}
+.palm-group > .browser-list > .palm-list .palm-row.selected.single {
+    border: none;
+    background: none;
+    border-width: 24px 20px;
+    -webkit-border-image: url(../images/selection-gradient-last.png) 24 20 24 20 repeat repeat;
+}
+.lowercase {
+    text-transform: lowercase;
+}
+
+
+.palm-menu-icon.load-progress {
+      background-image: url(../images/progress-indicator.png);
+      width: 48px;
+      height: 48px;
+      left: -24px;
+      margin-top: -8px;
+}
+
+.palm-menu-icon.load-progress.progress-0 {
+      background-position: 0px 0px;
+}
+.palm-menu-icon.load-progress.progress-1 {
+      background-position: 0px -48px;
+}
+.palm-menu-icon.load-progress.progress-2 {
+      background-position: 0px -96px;
+}
+.palm-menu-icon.load-progress.progress-3 {
+      background-position: 0px -144px;
+}
+.palm-menu-icon.load-progress.progress-4 {
+      background-position: 0px -192px;
+}
+.palm-menu-icon.load-progress.progress-5 {
+      background-position: 0px -240px;
+}
+.palm-menu-icon.load-progress.progress-6 {
+      background-position: 0px -288px;
+}
+.palm-menu-icon.load-progress.progress-7 {
+      background-position: 0px -336px;
+}
+.palm-menu-icon.load-progress.progress-8 {
+      background-position: 0px -384px;
+}
+.palm-menu-icon.load-progress.progress-9 {
+      background-position: 0px -432px;
+}
+.palm-menu-icon.load-progress.progress-10 {
+      background-position: 0px -480px;
+}
+.palm-menu-icon.load-progress.progress-11 {
+      background-position: 0px -528px;
+}
+.palm-menu-icon.load-progress.progress-12 {
+      background-position: 0px -576px;
+}
+.palm-menu-icon.load-progress.progress-13 {
+      background-position: 0px -624px;
+}
+.palm-menu-icon.load-progress.progress-14 {
+      background-position: 0px -672px;
+}
+.palm-menu-icon.load-progress.progress-15 {
+      background-position: 0px -720px;
+}
+.palm-menu-icon.load-progress.progress-16 {
+      background-position: 0px -768px;
+}
+.palm-menu-icon.load-progress.progress-17 {
+      background-position: 0px -816px;
+}
+.palm-menu-icon.load-progress.progress-18 {
+      background-position: 0px -864px;
+}
+.palm-menu-icon.load-progress.progress-19 {
+      background-position: 0px -912px;
+}
+.palm-menu-icon.load-progress.progress-20 {
+      background-position: 0px -960px;
+}
+.palm-menu-icon.load-progress.progress-21 {
+      background-position: 0px -1008px;
+}
+.palm-menu-icon.load-progress.progress-22 {
+      background-position: 0px -1056px;
+}
+.palm-menu-icon.load-progress.progress-23 {
+      background-position: 0px -1104px;
+}
+.palm-menu-icon.load-progress.progress-24 {
+      background-position: 0px -1152px;
+}
+.palm-menu-icon.load-progress.progress-25 {
+      background-position: 0px -1200px;
+}

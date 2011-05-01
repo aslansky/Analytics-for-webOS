@@ -1,0 +1,28 @@
+{
+    "id": "com.aslansky.analytics",
+    "version": "0.9.2",
+    "title": "Analytics",
+    "vendor": "Alexander Slansky",
+    "vendorurl": "http://slansky.net/analytics",
+    "copyright": "&copy; 2010 Alexander Slansky",
+    "type": "web",
+    "main": "index.html",
+    "icon": "icon.png",
+    "smallicon" : "icon_small.png",
+    "miniicon": "miniicon.png",
+    "theme": "light",
+    "support": {
+        "url": "http://slansky.net/analytics",
+        "email": {
+            "address": "support@slansky.net",
+            "subject": "Support: Analytics by Alexander Slansky"
+        },
+        "resources": [
+            {
+                "type": "web",
+                "label": "Helpdesk",
+                "url": "http://support.slansky.net/"
+            }
+        ]
+    }
+}
